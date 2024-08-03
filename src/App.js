@@ -100,15 +100,18 @@ const App = () => {
   }, [videoRef.current]);
 
   return (
-    <div style={{ position:'relative'}}>
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        style={{ position:'absolute',width: "720px", height: "560px"}}
-      />
-      <div id="canvas-container" style={{position:'absolute', width: "720px", height: "560px",top:"0," ,zIndex:'999'}}></div>
-    </div>
+    <>
+      <h1 style={{textAlign:'center',marginBottom:'0px'}}>Face Detection App</h1>
+      <div style={{ display:'flex',justifyContent:'center',alignItems:'center',position:'relative',width: "100vw", height: "90vh"}}>
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          style={{ position:'absolute',width: "720px", height: "560px"}}
+        />
+        <div id="canvas-container" style={{position:'absolute', width: "720px", height: "560px",top:"0," ,zIndex:'999'}}></div>
+      </div>
+    </>
   );
 };
 
